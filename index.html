@@ -61,8 +61,8 @@
 	    <div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-lg-offset-3">
-					<h4>HELLO PEOPLE, MY NAME IS</h4>
-					<h1>MAYANK DAGA</h1>
+					<h4><span class="intro"></span></h4>
+					<h1><span class="name"></span></h1>
 					<h4><span class="tagline"></span></h4>
 				</div>
 			</div><! --/row -->
@@ -71,15 +71,44 @@
 	    
 	</div><! --/headerwrap -->
 	
-	<script>
-	$(function()
+	<script type="text/javascript">
+	$(document).ready(function() 
 	{
-		$(".tagline").typed({
-			strings: ["IT ENGINEER","DEVELOPER","GAME ADDICT"," IT ENGINEER | DEVELOPER | GAME ADDICT "],
-			typeSpeed: 25
+
+		$(".intro").typed({
+			strings: ["HELLO FELLOW EARTHLINGS! MY NAME IS"],
+			typeSpeed: 30,
+			callback: function(){name();}
+			
 		});
+	
+
+	function name()
+	{
+		$(".typed-cursor").hide();
+		$(".name").typed({
+			strings: ["MAYANK DAGA."],
+			typeSpeed: 75,
+			callback: function(){tagline();}
+			
+		});
+	};
+
+	function tagline()
+	{
+		$(".typed-cursor").hide();
+		$(".tagline").typed
+		({
+			strings: [" IT ENGINEER","DEVELOPER","GAME ADDICT","&#x1f608; IT ENGINEER | DEVELOPER | GAME ADDICT &#x1f608;"],
+			typeSpeed: 30
+		});
+	};
 	});
-</script>
+
+
+	
+
+	</script>
 	
 	<section id="works"></section>
 	<div class="container">
