@@ -25,6 +25,11 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+     <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/typed.min.js"></script>
+    
   </head>
 
   <body>
@@ -58,11 +63,23 @@
 				<div class="col-lg-6 col-lg-offset-3">
 					<h4>HELLO PEOPLE, MY NAME IS</h4>
 					<h1>MAYANK DAGA</h1>
-					<h4>< IT ENGINEER | DEVELOPER | GAME ADDICT /></h4>
+					<h4><span class="tagline"></span></h4>
 				</div>
 			</div><! --/row -->
 	    </div> <!-- /container -->
+	    
+	    
 	</div><! --/headerwrap -->
+	
+	<script>
+	$(function()
+	{
+		$(".tagline").typed({
+			strings: ["IT ENGINEER","DEVELOPER","GAME ADDICT"," IT ENGINEER | DEVELOPER | GAME ADDICT "],
+			typeSpeed: 25
+		});
+	});
+</script>
 	
 	<section id="works"></section>
 	<div class="container">
@@ -126,7 +143,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+
   </body>
 </html>
